@@ -1,10 +1,15 @@
-person1_name = input('Enter first person name: ')
-person1_age = int(input('Enter first person age: '))
-person2_name = input('Enter second person name: ')
-person2_age = int(input('Enter second person age: '))
+time_24 = input('Enter time (24-hour format, e.g. 16:32): ')
 
-# obie osoby muszą mieć min. 18 lat, dlatego używam 'and'
-if person1_age >= 18 and person2_age >= 18:
-    print(f'Both {person1_name} and {person2_name} are adults')
+# wycinam pierwsze dwie cyfry (godzinę) i zamieniam na liczbę, a minuty zostawiam jako tekst po dwukropku
+hours = int(time_24[0:2])
+minutes = time_24[3:5]
+
+if hours == 0:
+    print(f'Time in 12-hour format: 12:{minutes}am')
+elif hours < 12:
+    print(f'Time in 12-hour format: {hours}:{minutes}am')
+elif hours == 12:
+    print(f'Time in 12-hour format: 12:{minutes}pm')
 else:
-    print(f'Either {person1_name} or {person2_name} is not an adult')
+    # dla godzin po południu (13-23) odejmuję 12, żeby dostać format 1-11pm
+    print(f'Time in 12-hour format: {hours - 12}:{minutes}pm')

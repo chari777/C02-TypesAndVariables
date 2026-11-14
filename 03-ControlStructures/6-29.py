@@ -1,13 +1,20 @@
-decimal = int(input('Enter decimal number: '))
-number = decimal # robię kopię liczby, żeby na końcu ładnie wypisać wartość początkową
-binary = ''      # tu będę doklejać reszty z dzielenia od lewej strony
+n = int(input('Enter how many prime numbers to find: '))
+found = 0     # licznik znalezionych już liczb pierwszych
+candidate = 2 # pierwsza liczba, którą zaczynam sprawdzać (0 i 1 nie są pierwsze)
 
-if number == 0:
-    binary = '0'
+print('Prime numbers:', end=' ')
 
-while number > 0:
-    remainder = number % 2 # biorę resztę z dzielenia przez 2 (0 albo 1)
-    binary = str(remainder) + binary # doklejam resztę Z PRZODU (bo czytamy wynik od dołu do góry)
-    number = number // 2 # dzielę całkowicie przez 2 i biorę wynik do kolejnego kroku
-
-print(f'{decimal}(10) = {binary}(2)')
+while found < n:
+    is_prime = True # zakładam na start, że kandydat jest liczbą pierwszą
+    
+    # sprawdzam czy kandydat dzieli się bez reszty przez jakąkolwiek liczbę od 2 do (candidate - 1)
+    for divisor in range(2, candidate):
+        if candidate % divisor == 0:
+            is_prime = False # znalazłem dzielnik, więc to NIE jest liczba pierwsza
+            break
+            
+    if is_prime:
+        print(candidate, end=' ')
+        found += 1 # zaliczam kolejną znalezioną liczbę pierwszą
+        
+    candidate += 1 # biorę kolejną liczbę na warsztat

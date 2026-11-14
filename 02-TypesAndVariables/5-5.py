@@ -1,8 +1,8 @@
-cube_side_string = input('Enter cube side: ')
-cube_side = int(cube_side_string) # zamieniam wpisany tekst na liczbę całkowitą (int), bo na tekście nie da się potęgować
+price = float(input('Enter price: '))
+discount = float(input('Enter discount %: '))
 
-cube_volume = cube_side ** 3 # objętość to bok do sześcianu (potęga 3)
-cube_surface_area = 6 * (cube_side ** 2) # sześcian ma 6 identycznych kwadratowych ścian
+reduction = price * (discount / 100) # wyliczam ile złotych wynosi sam rabat
+new_price = price - reduction # odejmuję rabat od ceny wyjściowej
 
-print(f'The volume of a cube with side {cube_side} is {cube_volume}')
-print(f'The surface area of a cube with side {cube_side} is {cube_surface_area}')
+print(f'Price with discount: {new_price:.2f}')
+print(f'Reduction: {reduction:.2f}')

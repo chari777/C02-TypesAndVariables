@@ -1,9 +1,5 @@
-name = 'Gabriel'
-surname = 'Kozicki'
+name = 'George'
+surname = 'Bush'
 
-characters_in_name = len(name) # funkcja len() liczy długość tekstu (ile jest znaków)
-print(f'Your name has {characters_in_name} characters')
-print(f'Your surname has {len(surname)} characters')
-
-full_name = name + ' ' + surname
-print(f'Your full name has {len(full_name)} characters') # pamiętam, że spacja w środku też liczy się jako znak
+# w Pythonie liczymy znaki od zera, więc [0] wyciąga pierwszą literę tekstu
+print(name[0], surname[0])

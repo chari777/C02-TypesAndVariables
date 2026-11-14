@@ -1,10 +1,10 @@
-hours = int(input('Enter number of parking hours: '))
+ean = input('Enter EAN-13 article number: ')
 
-if hours <= 2:
-    fee = 5
-elif hours <= 6:
-    fee = 15
+# najpierw sprawdzam długość i czy składa się z samych cyfr
+if len(ean) == 13 and ean.isdigit():
+    print('Article number is correct')
+    # zagnieżdżam drugi if: sprawdzam pierwsze trzy znaki tylko wtedy, gdy cały kod był poprawny
+    if ean[0:3] == '590':
+        print('Article manufactured in Poland')
 else:
-    fee = 20
-
-print(f'Parking fee: {fee} PLN')
+    print('Incorrect article number')

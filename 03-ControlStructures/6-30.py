@@ -1,13 +1,6 @@
-amount = int(input('Enter the amount in PLN: '))
-print(f'The amount of PLN {amount} in coins:')
-
-# dzielenie całkowite // mówi mi ile pełnych monet 5 zł mieści się w kwocie
-coins_5 = amount // 5
-amount = amount % 5 # reszta z dzielenia % to kwota, która została mi jeszcze do rozmienienia
-
-coins_2 = amount // 2
-coins_1 = amount % 2 # to co zostanie po dwuzłotówkach, muszę wydać w złotówkach
-
-print(f'5 PLN coins: {coins_5}')
-print(f'2 PLN coins: {coins_2}')
-print(f'1 PLN coins: {coins_1}')
+# zewnętrzna pętla idzie po wierszach od 1 do 7
+for row in range(1, 8):
+    # wewnętrzna pętla skacze co 7 w prawo (np. dla wiersza 1: 1, 8, 15, 22, 29, 36, 43)
+    for num in range(row, 50, 7):
+        print(f'{num:2}', end=' ') # zapis :2 wyrównuje jednocyfrowe liczby spacją, żeby kolumny były równe
+    print() # po każdym wierszu łamię linię

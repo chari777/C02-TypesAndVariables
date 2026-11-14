@@ -1,19 +1,7 @@
-total_washing_time = 0
-program = input('Select washing program: (j)acket, (u)nderwear, (s)hoes: ')
-extra_rinse = input('Extra rinse? (y/n): ')
-extra_spin = input('Extra spin? (y/n): ')
+# pierwsza pętla rysuje górną połowę (od 1 do 5 gwiazdek)
+for i in range(1, 6):
+    print('* ' * i) # mnożenie tekstu przez liczbę powiela ten tekst tyle razy
 
-if program == 'j':
-    total_washing_time += 40
-elif program == 'u':
-    total_washing_time += 70
-elif program == 's':
-    total_washing_time += 20
-
-# używam osobnych 'if' (a nie 'elif'), bo mogę wybrać zarówno płukanie, jak i wirowanie jednocześnie
-if extra_rinse == 'y':
-    total_washing_time += 15
-if extra_spin == 'y':
-    total_washing_time += 9
-
-print(f'Total washing time: {total_washing_time} minutes')
+# druga pętla rysuje dolną połowę (od 4 w dół do 1 gwiazdki; krok -1 oznacza odliczanie wstecz)
+for i in range(4, 0, -1):
+    print('* ' * i)

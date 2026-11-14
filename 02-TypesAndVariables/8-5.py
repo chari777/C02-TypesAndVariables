@@ -1,7 +1,5 @@
-r = float(input('Enter radius r: '))
-pi = 3.14
+swift = input('Enter SWIFT code: ') # np. BPKOPLPW
 
-area = pi * r ** 2          # wzór na pole koła: pi * r^2
-circumference = 2 * pi * r  # wzór na obwód koła: 2 * pi * r
-
-print(f'Circumference = {circumference:.2f}, area = {area:.2f}')
+# pierwsze 4 znaki to kod banku, a kolejne 2 (na indeksach 4 i 5) to kod kraju
+print(f'Bank Code: {swift[0:4]}')
+print(f'Country Code: {swift[4:6]}')

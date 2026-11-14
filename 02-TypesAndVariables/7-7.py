@@ -1,4 +1,3 @@
-number = int(input('Enter number: '))
-# znak % (modulo) daje resztę z dzielenia; jeśli reszta z dzielenia przez 2 wynosi 0, liczba jest parzysta
-even = number % 2 == 0 # pamiętam, że dwa znaki == to porównanie ("czy jest równe?"), a jeden = to przypisanie
-print(f'Number is even: {even}')
+import random # ładuję moduł do losowania liczb
+random_number = random.randint(5, 10) # losuję liczbę całkowitą z przedziału od 5 do 10 (włącznie z 5 i 10)
+print(random_number)

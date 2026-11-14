@@ -1,6 +1,9 @@
-first_name = input('Enter your first name: ') # program tutaj staje i czeka, aż wpiszę coś w terminalu
-last_name = input('Enter your last name: ')
-full_name = first_name + ' ' + last_name # sklejam imię i nazwisko, wrzucając spację pomiędzy nie
+# skróciłem zapis: od razu wrzucam input() do środka int(), żeby nie tworzyć osobnych zmiennych tekstowych
+a = int(input('a='))
+b = int(input('b='))
+c = int(input('c='))
 
-print(f'Your first name is {first_name} and your last name is {last_name}')
-print(f'And your full name is {full_name}')
+volume = a * b * c # objętość to iloczyn trzech krawędzi
+surface_area = 2 * (a * b + a * c + b * c) # pole całkowite to suma pól wszystkich 6 ścian (po 2 takie same)
+
+print(f'Volume = {volume}, surface area = {surface_area}')

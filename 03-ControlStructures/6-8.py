@@ -1,6 +1,5 @@
-new_password = input('Enter new password: ')
+name = input('Enter name: ')
 
-if len(new_password) < 12:
-    print('Password too short (min. 12 chars)')
-else:
-    print('Password is valid')
+# indeks [-1] zawsze oznacza ostatni znak w tekście
+if name[-1] == 'a':
+    print(f'{name} -- Polish female name')

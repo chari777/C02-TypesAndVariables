@@ -1,9 +1,10 @@
-human_years = int(input("Enter the dog's age in human years: "))
+# porównanie == 'y' od razu zamienia odpowiedź użytkownika na True lub False
+q1 = input('Are you interested in computer science? (y/n): ') == 'y'
+q2 = input('Do you like playing computer games? (y/n): ') == 'y'
+q3 = input('Do you have an Instagram account? (y/n): ') == 'y'
 
-if human_years <= 2:
-    dog_years = human_years * 10.5 # pierwsze dwa lata liczą się po 10.5
-else:
-    # pierwsze 2 lata dają 21, a każdy kolejny rok powyżej dwóch mnożę przez 4
-    dog_years = 2 * 10.5 + (human_years - 2) * 4
-
-print(f"The dog's age in dog's years is {int(dog_years)} years.")
+print('\nSURVEY RESULTS')
+# skrócony zapis warunkowy w jednej linii: wypisz 'Yes' jeśli zmienna jest True, w przeciwnym razie 'No'
+print(f"Interested in computer science: {'Yes' if q1 else 'No'}")
+print(f"Playing computer games: {'Yes' if q2 else 'No'}")
+print(f"Has an Instagram account: {'Yes' if q3 else 'No'}")

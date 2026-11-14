@@ -1,12 +1,13 @@
-current_price = 140.00
-previous_price = 200.00
+decimal = int(input('Enter decimal number: '))
+number = decimal # robię kopię liczby, żeby na końcu ładnie wypisać wartość początkową
+binary = ''      # tu będę doklejać reszty z dzielenia od lewej strony
 
-print(f'Current product price: {current_price:.2f}')
-print(f'Previous product price: {previous_price:.2f}')
+if number == 0:
+    binary = '0'
 
-# obliczam procentowy spadek ceny
-discount_percent = ((previous_price - current_price) / previous_price) * 100
+while number > 0:
+    remainder = number % 2 # biorę resztę z dzielenia przez 2 (0 albo 1)
+    binary = str(remainder) + binary # doklejam resztę Z PRZODU (bo czytamy wynik od dołu do góry)
+    number = number // 2 # dzielę całkowicie przez 2 i biorę wynik do kolejnego kroku
 
-if discount_percent >= 10:
-    print('Buy the product!!')
-    print(f'Product price reduced by {int(discount_percent)}%')
+print(f'{decimal}(10) = {binary}(2)')

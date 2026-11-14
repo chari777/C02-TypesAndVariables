@@ -1,10 +1,13 @@
-count = int(input('Number of products purchased: '))
-price = float(input('Product price: '))
+amount = int(input('Enter the amount in PLN: '))
+print(f'The amount of PLN {amount} in coins:')
 
-if count <= 2:
-    total = count * price # brak rabatu przy 1 lub 2 sztukach
-else:
-    # pierwsze 2 sztuki płacę w pełnej cenie, a resztę (count - 2) z rabatem 25% (czyli płacę 75% ceny)
-    total = (2 * price) + (count - 2) * (price * 0.75)
+# dzielenie całkowite // mówi mi ile pełnych monet 5 zł mieści się w kwocie
+coins_5 = amount // 5
+amount = amount % 5 # reszta z dzielenia % to kwota, która została mi jeszcze do rozmienienia
 
-print(f'Amount to pay: {total:.2f}')
+coins_2 = amount // 2
+coins_1 = amount % 2 # to co zostanie po dwuzłotówkach, muszę wydać w złotówkach
+
+print(f'5 PLN coins: {coins_5}')
+print(f'2 PLN coins: {coins_2}')
+print(f'1 PLN coins: {coins_1}')

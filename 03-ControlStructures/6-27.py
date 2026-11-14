@@ -1,17 +1,9 @@
-x = int(input('x = '))
-y = int(input('y = '))
+i = 6 # zaczynam od górnego rzędu (6 + 1 = 7, 6 + 2 = 8, 6 + 3 = 9)
 
-if x == 0 and y == 0:
-    print('Point P(0,0) is at the origin of the coordinate system')
-elif x == 0:
-    print(f'Point P({x},{y}) is on the Y axis')
-elif y == 0:
-    print(f'Point P({x},{y}) is on the X axis')
-elif x > 0 and y > 0:
-    print(f'Point P({x},{y}) is in the first quadrant of the coordinate system')
-elif x < 0 and y > 0:
-    print(f'Point P({x},{y}) is in the second quadrant of the coordinate system')
-elif x < 0 and y < 0:
-    print(f'Point P({x},{y}) is in the third quadrant of the coordinate system')
-else:
-    print(f'Point P({x},{y}) is in the fourth quadrant of the coordinate system')
+while i >= 0:
+    j = 1 # przed każdym rzędem muszę zresetować licznik kolumn z powrotem na 1
+    while j <= 3:
+        print(f'{i + j}', end=' ') # end=' ' sprawia, że liczby drukują się obok siebie zamiast w nowej linii
+        j += 1
+    print() # pusty print() robi przejście do nowej linii po zakończeniu rzędu
+    i -= 3  # schodzę o jeden rząd niżej (z 6 na 3, potem na 0)

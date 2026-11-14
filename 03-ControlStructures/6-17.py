@@ -1,5 +1,17 @@
-name = input('Enter name: ')
+x = int(input('x = '))
+y = int(input('y = '))
 
-# indeks [-1] zawsze oznacza ostatni znak w tekście
-if name[-1] == 'a':
-    print(f'{name} -- Polish female name')
+if x == 0 and y == 0:
+    print('Point P(0,0) is at the origin of the coordinate system')
+elif x == 0:
+    print(f'Point P({x},{y}) is on the Y axis')
+elif y == 0:
+    print(f'Point P({x},{y}) is on the X axis')
+elif x > 0 and y > 0:
+    print(f'Point P({x},{y}) is in the first quadrant of the coordinate system')
+elif x < 0 and y > 0:
+    print(f'Point P({x},{y}) is in the second quadrant of the coordinate system')
+elif x < 0 and y < 0:
+    print(f'Point P({x},{y}) is in the third quadrant of the coordinate system')
+else:
+    print(f'Point P({x},{y}) is in the fourth quadrant of the coordinate system')

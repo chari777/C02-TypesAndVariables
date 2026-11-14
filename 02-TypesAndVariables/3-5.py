@@ -1,10 +1,8 @@
-number1 = 71
-number2 = 14
-number3 = 25 # dopisałem trzecią zmienną, bo w oryginale były tylko dwie
+import math # muszę zaimportować bibliotekę math, bo sam Python nie ma funkcji pierwiastka
 
-result = number1 + number2 + number3 # zaktualizowałem sumę, żeby dodała też trzecią liczbę
+a = 5
+b = 8
+# dwie gwiazdki ** to potęgowanie, a math.sqrt() liczy pierwiastek kwadratowy (twierdzenie Pitagorasa)
+diagonal = math.sqrt(a**2 + b**2)
 
-print('Number 1: ', number1)
-print('Number 2: ', number2)
-print('Number 3: ', number3) # dodałem wypisanie trzeciej liczby na ekran
-print('The result of summation: ', result)
+print("Diagonal:", round(diagonal, 2))

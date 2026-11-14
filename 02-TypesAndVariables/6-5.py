@@ -1,5 +1,4 @@
-name = 'George'
-surname = 'Bush'
+phone = input('Enter phone number: ') # np. wpisuję 543097329
 
-# w Pythonie liczymy znaki od zera, więc [0] wyciąga pierwszą literę tekstu
-print(name[0], surname[0])
+# tnę wpisany numer na trzy kawałki po 3 cyfry i sklejam myślnikami
+print(f'Phone number: {phone[0:3]}-{phone[3:6]}-{phone[6:9]}')

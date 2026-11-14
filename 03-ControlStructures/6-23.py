@@ -1,10 +1,10 @@
-ean = input('Enter EAN-13 article number: ')
-
-# najpierw sprawdzam długość i czy składa się z samych cyfr
-if len(ean) == 13 and ean.isdigit():
-    print('Article number is correct')
-    # zagnieżdżam drugi if: sprawdzam pierwsze trzy znaki tylko wtedy, gdy cały kod był poprawny
-    if ean[0:3] == '590':
-        print('Article manufactured in Poland')
-else:
-    print('Incorrect article number')
+for i in range(1, 31):
+    # warunek podzielności przez oba (3 i 5) MUSI być pierwszy, bo inaczej wyłapałby go już pierwszy 'if' dla trójki!
+    if i % 3 == 0 and i % 5 == 0:
+        print('BINGO', end=' ')
+    elif i % 3 == 0:
+        print('THREE', end=' ')
+    elif i % 5 == 0:
+        print('FIVE', end=' ')
+    else:
+        print(i, end=' ')

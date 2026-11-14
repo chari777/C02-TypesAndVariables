@@ -1,10 +1,12 @@
-light_switch1 = False # False - wyłączony, True - włączony
-light_switch2 = False
-bulbs_on = 0
+temperature = 32 # wpisuję temperaturę do sprawdzenia (np. 33, 30, 8, 0, -2)
 
-if light_switch1:
-    bulbs_on += 1 # pierwszy włącznik zapala 1 żarówkę
-if light_switch2:
-    bulbs_on += 2 # drugi włącznik zapala 2 żarówki
-
-print(f"Number of bulbs lit: {bulbs_on}")
+if temperature > 35:
+    print("It is extremely hot")
+elif temperature > 30: # tu wpadnie zakres (30, 35], bo wyższe już wyłapał pierwszy 'if'
+    print("It is hot")
+elif temperature >= 15:
+    print("It is warm")
+elif temperature >= 0:
+    print("It is cold")
+else:
+    print("Warning, frost") # wszystko poniżej zera

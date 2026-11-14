@@ -1,15 +1,15 @@
-time_24 = input('Enter time (24-hour format, e.g. 16:32): ')
+correct_pin = '0805'
+attempts = 0
 
-# wycinam pierwsze dwie cyfry (godzinę) i zamieniam na liczbę, a minuty zostawiam jako tekst po dwukropku
-hours = int(time_24[0:2])
-minutes = time_24[3:5]
+while attempts < 3:
+    entered_pin = input('Enter the PIN code: ')
+    if entered_pin == correct_pin:
+        print('PIN correct! Payment accepted.')
+        break # jak trafiłem PIN, od razu przerywam pętlę
+    else:
+        print('Incorrect...')
+        attempts += 1 # zwiększam licznik nieudanych prób
 
-if hours == 0:
-    print(f'Time in 12-hour format: 12:{minutes}am')
-elif hours < 12:
-    print(f'Time in 12-hour format: {hours}:{minutes}am')
-elif hours == 12:
-    print(f'Time in 12-hour format: 12:{minutes}pm')
-else:
-    # dla godzin po południu (13-23) odejmuję 12, żeby dostać format 1-11pm
-    print(f'Time in 12-hour format: {hours - 12}:{minutes}pm')
+# jeśli wykorzystałem wszystkie 3 próby i żadna nie była trafiona, blokuję kartę
+if attempts == 3:
+    print('Sorry, your payment card has been blocked.')

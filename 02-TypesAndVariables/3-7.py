@@ -1,11 +1,9 @@
-x = 7
-y = 34
-z = 0 # zrobiłem pustą zmienną pomocniczą ("trzecią szklankę"), żeby nie stracić wartości przy zamianie
+total = 8000000000 # duże liczby zapisuję bez spacji i kropek
+north = 7200000000
+south = total - north # reszta ludzi na świecie musi mieszkać na półkuli południowej
 
-print("Before swapping: x=", x, "y=", y)
-
-z = x # najpierw chowam wartość x (czyli 7) do z, żeby jej nie nadpisać i nie zgubić
-x = y # teraz mogę bezpiecznie wrzucić wartość y (34) do x
-y = z # na koniec wyciągam schowane 7 ze zmiennej z i wrzucam do y
-
-print("After swapping: x=", x, "y=", y)
+print("World population: ", total)
+print("Northern Hemisphere: ", north)
+print("Northern Hemisphere in %: ", north / total * 100) # dzielę część przez całość i mnożę przez 100, żeby mieć procent
+print("Southern Hemisphere: ", south)
+print("Southern Hemisphere in %: ", south / total * 100)

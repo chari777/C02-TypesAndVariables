@@ -1,7 +1,8 @@
-import math
+import random
 
-circumference = float(input('Enter tree circumference in cm: '))
-# wczytuję obwód drzewa, więc żeby dostać średnicę, dzielę obwód przez Pi (wzór: Obwód = Pi * średnica)
-diameter = circumference / math.pi
-can_cut_down = diameter >= 50 # sprawdzam, czy średnica ma co najmniej 50 cm
-print(f'Tree can be cut down: {can_cut_down}')
+computer = random.randint(1, 6) # komputer po cichu losuje liczbę od 1 do 6
+you = int(input('Guess the number (1-6): ')) # ja wpisuję swój strzał i zamieniam go na liczbę int()
+
+won = computer == you # sprawdzam, czy mój strzał jest równy temu, co wylosował komputer
+print(f'Computer rolled: {computer}')
+print(f'You won: {won}')
