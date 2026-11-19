@@ -1,0 +1,11 @@
+###
+# Program korzystający z modułu MyText
+#
+import MyText
+
+text = "An apple a day keeps the doctor away"
+
+print('Text:', text)
+print('Number of words:', MyText.word_count(text))
+print('Words from the longest:', ','.join(MyText.words_longest_first(text)))
+print('Words ordered alphabetically:', ','.join(MyText.words_alphabetical(text)))
